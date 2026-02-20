@@ -49,10 +49,10 @@ REF_GNOME_SHELL_EXTENSIONS_ENABLE=(
 
 
 REF_GNOME_SHELL_EXTENSIONS_DISABLE=(
+	"dash-to-dock@micxgx.gmail.com"
 	"apps-menu@gnome-shell-extensions.gcampax.github.com"
 	"places-menu@gnome-shell-extensions.gcampax.github.com"
 	"window-list@gnome-shell-extensions.gcampax.github.com"
-	"dash-to-dock@micxgx.gmail.com"
 )
 
 
