@@ -299,6 +299,12 @@ sys_theme_install_fluent_icon_theme_via_wget_archive () {
 sys_theme_install_wallpaper () {
 
 
+	## config via dconf
+	dconf write /org/gnome/desktop/background/picture-uri "'/usr/share/backgrounds/default.png'"
+	dconf write /org/gnome/desktop/background/picture-uri-dark "'/usr/share/backgrounds/default.png'"
+	dconf write /org/gnome/desktop/screensaver/picture-uri "'/usr/share/backgrounds/default-login.png'"
+
+
 	if [ -e "/usr/share/backgrounds/Fluent-round-dark.png" ]; then
 		return 0
 	fi
@@ -329,11 +335,6 @@ sys_theme_install_wallpaper () {
 	sudo ln -sf next.png default.png
 	sudo ln -sf next.png default-login.png
 	sudo ln -sf next.png default-grub.png
-
-
-	dconf write /org/gnome/desktop/background/picture-uri "'default.png'"
-	dconf write /org/gnome/desktop/background/picture-uri-dark "'default.png'"
-	dconf write /org/gnome/desktop/screensaver/picture-uri "'default-login.png'"
 
 
 	cd "${OLDPWD}"
