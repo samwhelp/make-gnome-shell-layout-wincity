@@ -145,6 +145,8 @@ sys_package_remove () {
 
 mod_theme_master_install () {
 
+	sys_theme_install_wallpaper
+
 	sys_theme_install_fluent_gtk_theme
 
 	sys_theme_install_fluent_icon_theme
@@ -282,6 +284,57 @@ sys_theme_install_fluent_icon_theme_via_wget_archive () {
 	cd /tmp/Fluent-icon-theme-master/cursors
 
 	./install.sh
+
+	cd "${OLDPWD}"
+
+}
+
+
+
+
+##
+## ## Model / Wallpaper
+##
+
+sys_theme_install_wallpaper () {
+
+
+	if [ -e "/usr/share/backgrounds/Fluent-round-dark.png" ]; then
+		return 0
+	fi
+
+
+	echo
+	echo sudo mkdir -p "/usr/share/backgrounds"
+	echo
+	sudo mkdir -p "/usr/share/backgrounds"
+
+
+	cd "/usr/share/backgrounds"
+
+
+	echo
+	echo sudo wget -c "https://raw.githubusercontent.com/vinceliuice/Fluent-kde/refs/heads/main/wallpaper/Fluent-round-dark/contents/images/3840x2160.png" -O "./Fluent-round-dark.png"
+	echo
+	sudo wget -c "https://raw.githubusercontent.com/vinceliuice/Fluent-kde/refs/heads/main/wallpaper/Fluent-round-dark/contents/images/3840x2160.png" -O "./Fluent-round-dark.png"
+
+
+	echo
+	echo sudo wget -c "https://raw.githubusercontent.com/vinceliuice/MacTahoe-kde/refs/heads/main/wallpapers/MacTahoe-Light/contents/images/3840x2160.jpeg" -O "./Fluent-round-light.png"
+	echo
+	sudo wget -c "https://raw.githubusercontent.com/vinceliuice/Fluent-kde/refs/heads/main/wallpaper/Fluent-round-light/contents/images/3840x2160.png" -O "./Fluent-round-light.png"
+
+
+	sudo ln -sf Fluent-round-dark.png next.png
+	sudo ln -sf next.png default.png
+	sudo ln -sf next.png default-login.png
+	sudo ln -sf next.png default-grub.png
+
+
+	dconf write /org/gnome/desktop/background/picture-uri "'default.png'"
+	dconf write /org/gnome/desktop/background/picture-uri-dark "'default.png'"
+	dconf write /org/gnome/desktop/screensaver/picture-uri "'default-login.png'"
+
 
 	cd "${OLDPWD}"
 
@@ -821,12 +874,12 @@ dconf load / << __EOF__
 
 [org/gnome/desktop/background]
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/default.png'
-picture-uri-dark='file:///usr/share/backgrounds/default.png'
+picture-uri='file:///usr/share/backgrounds/default.jpg'
+picture-uri-dark='file:///usr/share/backgrounds/default.jpg'
 
 
 [org/gnome/desktop/screensaver]
-picture-uri='file:///usr/share/backgrounds/default-login.png'
+picture-uri='file:///usr/share/backgrounds/default-login.jpg'
 
 
 __EOF__
