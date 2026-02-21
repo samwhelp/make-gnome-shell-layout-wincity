@@ -1592,7 +1592,7 @@ mod_gnome_shell_master_layout_install () {
 
 }
 
-mod_gnome_shell_master_install () {
+portal_gnome_shell_install () {
 
 	mod_package_master_install
 
@@ -1613,7 +1613,7 @@ mod_gnome_shell_master_install () {
 
 __main__ () {
 
-	mod_gnome_shell_master_install
+	portal_gnome_shell_install
 
 }
 
