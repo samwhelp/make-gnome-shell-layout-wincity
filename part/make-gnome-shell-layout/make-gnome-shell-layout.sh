@@ -187,15 +187,17 @@ mod_python_pipx_install () {
 
 sys_python_pipx_install () {
 
-	#sys_python_pipx_install_for_ubuntu
+	local the_distro="${REF_MASTER_DISTRO}"
 
-	sys_python_pipx_install_for_debian
+	local the_delegate="sys_python_pipx_install_for_${the_distro}"
 
-	#sys_python_pipx_install_for_fedora
 
-	#sys_python_pipx_install_for_archlinux
+	if ! is_function_exist "${the_delegate}"; then
+		return 0
+	fi
 
-	#sys_python_pipx_install_for_voidlinux
+
+	"${the_delegate}"
 
 
 	return 0
