@@ -692,6 +692,31 @@ sys_theme_install_colloid_icon_theme_via_wget_archive () {
 ## ## Model / Style / vimix
 ##
 
+sys_style_config_install_for_vimix () {
+
+dconf load / << __EOF__
+
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+gtk-theme='Vimix-dark-ruby'
+icon-theme='Citrus-red-dark'
+cursor-theme='breeze_cursors'
+cursor-size=24
+
+
+[org/gnome/desktop/wm/preferences]
+theme='Vimix-dark-ruby'
+
+
+[org/gnome/shell/extensions/user-theme]
+name='Vimix-dark-ruby'
+
+
+__EOF__
+
+}
+
 sys_style_install_for_vimix () {
 
 	sys_wallpaper_install_for_default
@@ -704,6 +729,9 @@ sys_style_install_for_vimix () {
 
 	sys_theme_install_citrus_icon_theme
 
+	sys_theme_install_greystone_icon_theme
+
+	sys_style_config_install_for_vimix
 }
 
 sys_theme_install_vimix_gtk_theme () {
@@ -867,6 +895,60 @@ sys_theme_install_citrus_icon_theme_via_wget_archive () {
 	cd /tmp/citrus-icon-theme-port
 
 	./install.sh -red
+
+	cd "${OLDPWD}"
+
+
+
+
+}
+
+
+
+
+##
+## ## Model / Icon / greystone
+##
+
+sys_theme_install_greystone_icon_theme () {
+
+	sys_theme_install_greystone_icon_theme_via_wget_archive
+
+}
+
+sys_theme_install_greystone_icon_theme_via_wget_archive () {
+
+
+	if [ -e "${HOME}/.local/share/icons/GreyStone" ]; then
+		return 0
+	fi
+
+
+	mkdir -p "${HOME}/.local/share/icons"
+
+
+	wget -c 'https://github.com/samwhelp/greystone-icon-theme/archive/refs/heads/port.tar.gz' -O '/tmp/greystone-icon-theme-port.tar.gz'
+
+
+
+
+	cd /tmp
+
+	tar xf greystone-icon-theme-port.tar.gz
+
+	cd "${OLDPWD}"
+
+
+
+
+	cd /tmp/greystone-icon-theme-port
+
+	tar xf GreyStone.tar.xz
+	cp -rfT ./GreyStone "${HOME}/.local/share/icons/GreyStone"
+
+
+	tar xf GreyStone-Circle.tar.xz
+	cp -rfT ./GreyStone-Circle "${HOME}/.local/share/icons/GreyStone-Circle"
 
 	cd "${OLDPWD}"
 
