@@ -698,9 +698,11 @@ sys_style_install_for_vimix () {
 
 	sys_theme_install_vimix_gtk_theme
 
-	sys_theme_install_vimix_icon_theme
+	#sys_theme_install_vimix_icon_theme
 
 	sys_theme_install_vimix_cursor_theme
+
+	sys_theme_install_citrus_icon_theme
 
 }
 
@@ -810,6 +812,61 @@ sys_theme_install_vimix_cursor_theme_via_wget_archive () {
 	cd /tmp/Vimix-cursors-master
 
 	./install.sh
+
+	cd "${OLDPWD}"
+
+
+
+
+}
+
+
+
+
+##
+##
+################################################################################
+##
+##
+
+
+
+
+##
+## ## Model / Icon / citrus
+##
+
+sys_theme_install_citrus_icon_theme () {
+
+	sys_theme_install_citrus_icon_theme_via_wget_archive
+
+}
+
+sys_theme_install_citrus_icon_theme_via_wget_archive () {
+
+
+	if [ -e "${HOME}/.local/share/icons/Citrus" ]; then
+		return 0
+	fi
+
+
+	wget -c 'https://github.com/samwhelp/citrus-icon-theme/archive/refs/heads/port.tar.gz' -O '/tmp/citrus-icon-theme-port.tar.gz'
+
+
+
+
+	cd /tmp
+
+	tar xf citrus-icon-theme-port.tar.gz
+
+	cd "${OLDPWD}"
+
+
+
+
+	cd /tmp/citrus-icon-theme-port
+
+	./install.sh -red
 
 	cd "${OLDPWD}"
 
