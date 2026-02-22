@@ -442,6 +442,39 @@ sys_wallpaper_asset_install_for_maccity () {
 
 sys_style_install_for_fluent () {
 
+	sys_style_asset_install_for_fluent
+
+	sys_style_config_install_for_fluent
+
+}
+
+sys_style_config_install_for_fluent () {
+
+dconf load / << __EOF__
+
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+gtk-theme='Fluent-round-Dark'
+icon-theme='Fluent-dark'
+cursor-theme='Fluent-dark-cursors'
+cursor-size=24
+
+
+[org/gnome/desktop/wm/preferences]
+theme='Fluent-round-Dark'
+
+
+[org/gnome/shell/extensions/user-theme]
+name='Fluent-round-Dark'
+
+
+__EOF__
+
+}
+
+sys_style_asset_install_for_fluent () {
+
 	sys_wallpaper_install_for_wincity
 
 	sys_theme_install_fluent_gtk_theme
@@ -603,6 +636,39 @@ sys_theme_install_fluent_icon_theme_via_wget_archive () {
 ##
 
 sys_style_install_for_colloid () {
+
+	sys_style_asset_install_for_colloid
+
+	sys_style_config_install_for_colloid
+
+}
+
+sys_style_config_install_for_colloid () {
+
+dconf load / << __EOF__
+
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+gtk-theme='Colloid-Dark'
+icon-theme='Colloid-Dark'
+cursor-theme='Colloid-dark-cursors'
+cursor-size=24
+
+
+[org/gnome/desktop/wm/preferences]
+theme='Colloid-Dark'
+
+
+[org/gnome/shell/extensions/user-theme]
+name='Colloid-Dark'
+
+
+__EOF__
+
+}
+
+sys_style_asset_install_for_colloid () {
 
 	sys_wallpaper_install_for_maccity
 
