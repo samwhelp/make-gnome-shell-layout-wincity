@@ -239,7 +239,7 @@ mod_style_install () {
 ## ## Model / Wallpaper
 ##
 
-sys_wallpaper_install () {
+sys_wallpaper_install_for_default () {
 
 	#sys_wallpaper_install_for_wincity
 
@@ -673,6 +673,107 @@ sys_theme_install_colloid_icon_theme_via_wget_archive () {
 	./install.sh
 
 	cd "${OLDPWD}"
+
+}
+
+
+
+
+##
+##
+################################################################################
+##
+##
+
+
+
+
+##
+## ## Model / Style / vimix
+##
+
+sys_style_install_for_vimix () {
+
+	sys_wallpaper_install_for_default
+
+	sys_theme_install_vimix_gtk_theme
+
+	sys_theme_install_vimix_icon_theme
+
+}
+
+sys_theme_install_vimix_gtk_theme () {
+
+	sys_theme_install_vimix_gtk_theme_via_wget_archive
+
+}
+
+sys_theme_install_vimix_gtk_theme_via_wget_archive () {
+
+
+	if [ -e "${HOME}/.themes/Vimix" ]; then
+		return 0
+	fi
+
+
+	wget -c 'https://github.com/vinceliuice/Vimix-gtk-theme/archive/refs/heads/master.tar.gz' -O '/tmp/Vimix-gtk-theme-master.tar.gz'
+
+
+
+
+	cd /tmp
+
+	tar xf Vimix-gtk-theme-master.tar.gz
+
+	cd "${OLDPWD}"
+
+
+
+
+	cd /tmp/Vimix-gtk-theme-master
+
+	./install.sh --theme all
+
+	cd "${OLDPWD}"
+
+}
+
+sys_theme_install_vimix_icon_theme () {
+
+	sys_theme_install_vimix_icon_theme_via_wget_archive
+
+}
+
+sys_theme_install_vimix_icon_theme_via_wget_archive () {
+
+
+	if [ -e "${HOME}/.local/share/icons/Vimix" ]; then
+		return 0
+	fi
+
+
+	wget -c 'https://github.com/vinceliuice/Vimix-icon-theme/archive/refs/heads/master.tar.gz' -O '/tmp/Vimix-icon-theme-master.tar.gz'
+
+
+
+
+	cd /tmp
+
+	tar xf Vimix-icon-theme-master.tar.gz
+
+	cd "${OLDPWD}"
+
+
+
+
+	cd /tmp/Vimix-icon-theme-master
+
+	./install.sh -a
+
+	cd "${OLDPWD}"
+
+
+
 
 }
 
