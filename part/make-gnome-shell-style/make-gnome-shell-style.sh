@@ -847,7 +847,7 @@ dconf load / << __EOF__
 color-scheme='prefer-dark'
 gtk-theme='Vimix-dark-ruby'
 icon-theme='Citrus-red-dark'
-cursor-theme='breeze_cursors'
+cursor-theme='Vimix-cursors'
 cursor-size=24
 
 
@@ -888,26 +888,26 @@ sys_theme_install_vimix_gtk_theme () {
 sys_theme_install_vimix_gtk_theme_via_wget_archive () {
 
 
-	if [ -e "${HOME}/.themes/Vimix" ]; then
+	if [ -e "${HOME}/.themes/Vimix-ruby" ]; then
 		return 0
 	fi
 
 
-	wget -c 'https://github.com/vinceliuice/Vimix-gtk-theme/archive/refs/heads/master.tar.gz' -O '/tmp/Vimix-gtk-theme-master.tar.gz'
+	wget -c 'https://github.com/vinceliuice/Vimix-gtk-themes/archive/refs/heads/master.tar.gz' -O '/tmp/Vimix-gtk-themes-master.tar.gz'
 
 
 
 
 	cd /tmp
 
-	tar xf Vimix-gtk-theme-master.tar.gz
+	tar xf Vimix-gtk-themes-master.tar.gz
 
 	cd "${OLDPWD}"
 
 
 
 
-	cd /tmp/Vimix-gtk-theme-master
+	cd /tmp/Vimix-gtk-themes-master
 
 	./install.sh --theme all
 
@@ -963,7 +963,7 @@ sys_theme_install_vimix_cursor_theme () {
 sys_theme_install_vimix_cursor_theme_via_wget_archive () {
 
 
-	if [ -e "${HOME}/.local/share/icons/Vimix" ]; then
+	if [ -e "${HOME}/.local/share/icons/Vimix-cursors" ]; then
 		return 0
 	fi
 
@@ -1018,7 +1018,7 @@ sys_theme_install_citrus_icon_theme () {
 sys_theme_install_citrus_icon_theme_via_wget_archive () {
 
 
-	if [ -e "${HOME}/.local/share/icons/Citrus" ]; then
+	if [ -e "${HOME}/.local/share/icons/Citrus-red" ]; then
 		return 0
 	fi
 
