@@ -1133,18 +1133,18 @@ dconf load / << __EOF__
 
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
-gtk-theme='Graphite'
+gtk-theme='Graphite-Dark'
 icon-theme='GreyStone-Circle'
-cursor-theme='Graphite-cursors'
+cursor-theme='Graphite-dark-cursors'
 cursor-size=24
 
 
 [org/gnome/desktop/wm/preferences]
-theme='Graphite'
+theme='Graphite-Dark'
 
 
 [org/gnome/shell/extensions/user-theme]
-name='Graphite'
+name='Graphite-Dark'
 
 
 __EOF__
@@ -1210,12 +1210,12 @@ sys_theme_install_graphite_cursor_theme () {
 sys_theme_install_graphite_cursor_theme_via_wget_archive () {
 
 
-	if [ -e "${HOME}/.local/share/icons/Graphite-cursors" ]; then
+	if [ -e "${HOME}/.local/share/icons/Graphite-dark-cursors" ]; then
 		return 0
 	fi
 
 
-	wget -c 'https://github.com/vinceliuice/Graphite-cursors/archive/refs/heads/main.tar.gz' -O '/tmp/Vimix-cursors-main.tar.gz'
+	wget -c 'https://github.com/vinceliuice/Graphite-cursors/archive/refs/heads/main.tar.gz' -O '/tmp/Graphite-cursors-main.tar.gz'
 
 
 
@@ -1271,18 +1271,18 @@ dconf load / << __EOF__
 
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
-gtk-theme='Jasper'
+gtk-theme='Jasper-Dark'
 icon-theme='GreyStone-Circle'
-cursor-theme='Graphite-cursors'
+cursor-theme='Vimix-cursors'
 cursor-size=24
 
 
 [org/gnome/desktop/wm/preferences]
-theme='Jasper'
+theme='Jasper-Dark'
 
 
 [org/gnome/shell/extensions/user-theme]
-name='Jasper'
+name='Jasper-Dark'
 
 
 __EOF__
@@ -1295,7 +1295,7 @@ sys_style_asset_install_for_jasper () {
 
 	sys_theme_install_jasper_gtk_theme
 
-	sys_theme_install_graphite_cursor_theme
+	sys_theme_install_vimix_cursor_theme
 
 	sys_theme_install_citrus_icon_theme
 
