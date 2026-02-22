@@ -764,6 +764,14 @@ sys_theme_install_colloid_icon_theme_via_wget_archive () {
 ## ## Model / Style / vimix
 ##
 
+sys_style_install_for_vimix () {
+
+	sys_style_asset_install_for_vimix
+
+	sys_style_config_install_for_vimix
+
+}
+
 sys_style_config_install_for_vimix () {
 
 dconf load / << __EOF__
@@ -789,7 +797,7 @@ __EOF__
 
 }
 
-sys_style_install_for_vimix () {
+sys_style_asset_install_for_vimix () {
 
 	sys_wallpaper_install_for_default
 
@@ -803,7 +811,6 @@ sys_style_install_for_vimix () {
 
 	sys_theme_install_greystone_icon_theme
 
-	sys_style_config_install_for_vimix
 }
 
 sys_theme_install_vimix_gtk_theme () {
