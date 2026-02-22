@@ -257,11 +257,47 @@ sys_wallpaper_install_for_default () {
 
 sys_wallpaper_install_for_wincity () {
 
+	sys_wallpaper_asset_install_for_wincity
 
-	## config via dconf
-	dconf write /org/gnome/desktop/background/picture-uri "'/usr/share/backgrounds/default.png'"
-	dconf write /org/gnome/desktop/background/picture-uri-dark "'/usr/share/backgrounds/default.png'"
-	dconf write /org/gnome/desktop/screensaver/picture-uri "'/usr/share/backgrounds/default-login.png'"
+	sys_wallpaper_config_install_for_wincity
+
+}
+
+sys_wallpaper_config_install_for_wincity () {
+
+
+	## config via gsettings set
+	#gsettings set org.gnome.desktop.background picture-uri "'/usr/share/backgrounds/default.jpeg'"
+	#gsettings set org.gnome.desktop.background picture-uri-dark "'/usr/share/backgrounds/default.jpeg'"
+	#gsettings set org.gnome.desktop.screensaver picture-uri "'/usr/share/backgrounds/default-login.jpeg'"
+
+
+	## config via dconf write
+	#dconf write /org/gnome/desktop/background/picture-uri "'/usr/share/backgrounds/default.jpeg'"
+	#dconf write /org/gnome/desktop/background/picture-uri-dark "'/usr/share/backgrounds/default.jpeg'"
+	#dconf write /org/gnome/desktop/screensaver/picture-uri "'/usr/share/backgrounds/default-login.jpeg'"
+
+
+	## config via dconf load
+
+dconf load / << __EOF__
+
+
+[org/gnome/desktop/background]
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/default.png'
+picture-uri-dark='file:///usr/share/backgrounds/default.png'
+
+
+[org/gnome/desktop/screensaver]
+picture-uri='file:///usr/share/backgrounds/default-login.png'
+
+
+__EOF__
+
+}
+
+sys_wallpaper_asset_install_for_wincity () {
 
 
 	if [ -e "/usr/share/backgrounds/Fluent-round-dark.png" ]; then
