@@ -700,6 +700,8 @@ sys_style_install_for_vimix () {
 
 	sys_theme_install_vimix_icon_theme
 
+	sys_theme_install_vimix_cursor_theme
+
 }
 
 sys_theme_install_vimix_gtk_theme () {
@@ -769,6 +771,45 @@ sys_theme_install_vimix_icon_theme_via_wget_archive () {
 	cd /tmp/Vimix-icon-theme-master
 
 	./install.sh -a
+
+	cd "${OLDPWD}"
+
+
+
+
+}
+
+sys_theme_install_vimix_cursor_theme () {
+
+	sys_theme_install_vimix_cursor_theme_via_wget_archive
+
+}
+
+sys_theme_install_vimix_cursor_theme_via_wget_archive () {
+
+
+	if [ -e "${HOME}/.local/share/icons/Vimix" ]; then
+		return 0
+	fi
+
+
+	wget -c 'https://github.com/vinceliuice/Vimix-cursors/archive/refs/heads/master.tar.gz' -O '/tmp/Vimix-cursors-master.tar.gz'
+
+
+
+
+	cd /tmp
+
+	tar xf Vimix-cursors-master.tar.gz
+
+	cd "${OLDPWD}"
+
+
+
+
+	cd /tmp/Vimix-cursors-master
+
+	./install.sh
 
 	cd "${OLDPWD}"
 
