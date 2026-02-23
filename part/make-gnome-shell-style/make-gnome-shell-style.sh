@@ -1243,7 +1243,7 @@ __EOF__
 
 sys_style_asset_install_for_graphite () {
 
-	sys_wallpaper_install_for_default
+	sys_wallpaper_install_for_graphite
 
 	sys_theme_install_graphite_gtk_theme
 
