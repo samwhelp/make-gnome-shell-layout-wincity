@@ -1738,6 +1738,208 @@ sys_theme_install_layan_gtk_theme_via_wget_archive () {
 
 
 ##
+## ## Model / Style / lavanda
+##
+
+sys_style_install_for_lavanda () {
+
+	sys_style_asset_install_for_lavanda
+
+	sys_style_config_install_for_lavanda
+
+}
+
+sys_style_config_install_for_lavanda () {
+
+dconf load / << __EOF__
+
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+gtk-theme='Lavanda-Sea-Dark'
+icon-theme='Citrus-red-dark'
+cursor-theme='Vimix-cursors'
+cursor-size=24
+
+
+[org/gnome/desktop/wm/preferences]
+theme='Lavanda-Sea-Dark'
+
+
+[org/gnome/shell/extensions/user-theme]
+name='Lavanda-Sea-Dark'
+
+
+__EOF__
+
+}
+
+sys_style_asset_install_for_lavanda () {
+
+	sys_wallpaper_install_for_default
+
+	sys_theme_install_lavanda_gtk_theme
+
+	sys_theme_install_vimix_cursor_theme
+
+	sys_theme_install_citrus_icon_theme
+
+	sys_theme_install_greystone_icon_theme
+
+	sys_theme_install_questx_icon_theme
+
+}
+
+sys_theme_install_lavanda_gtk_theme () {
+
+	sys_theme_install_lavanda_gtk_theme_via_wget_archive
+
+}
+
+sys_theme_install_lavanda_gtk_theme_via_wget_archive () {
+
+
+	if [ -e "${HOME}/.themes/Lavanda-Sea-Dark" ]; then
+		return 0
+	fi
+
+
+	wget -c 'https://github.com/vinceliuice/Lavanda-gtk-theme/archive/refs/heads/main.tar.gz' -O '/tmp/Lavanda-gtk-theme-main.tar.gz'
+
+
+
+
+	cd /tmp
+
+	tar xf Lavanda-gtk-theme-main.tar.gz
+
+	cd "${OLDPWD}"
+
+
+
+
+	cd /tmp/Lavanda-gtk-theme-main
+
+	./install.sh --theme all
+
+	cd "${OLDPWD}"
+
+}
+
+
+
+
+##
+##
+################################################################################
+##
+##
+
+
+
+
+##
+## ## Model / Style / qogir
+##
+
+sys_style_install_for_qogir () {
+
+	sys_style_asset_install_for_qogir
+
+	sys_style_config_install_for_qogir
+
+}
+
+sys_style_config_install_for_qogir () {
+
+dconf load / << __EOF__
+
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+gtk-theme='Qogir-Dark'
+icon-theme='Citrus-red-dark'
+cursor-theme='Vimix-cursors'
+cursor-size=24
+
+
+[org/gnome/desktop/wm/preferences]
+theme='Qogir-Dark'
+
+
+[org/gnome/shell/extensions/user-theme]
+name='Qogir-Dark'
+
+
+__EOF__
+
+}
+
+sys_style_asset_install_for_qogir () {
+
+	sys_wallpaper_install_for_default
+
+	sys_theme_install_qogir_gtk_theme
+
+	sys_theme_install_vimix_cursor_theme
+
+	sys_theme_install_citrus_icon_theme
+
+	sys_theme_install_greystone_icon_theme
+
+	sys_theme_install_questx_icon_theme
+
+}
+
+sys_theme_install_qogir_gtk_theme () {
+
+	sys_theme_install_qogir_gtk_theme_via_wget_archive
+
+}
+
+sys_theme_install_qogir_gtk_theme_via_wget_archive () {
+
+
+	if [ -e "${HOME}/.themes/Qogir-Dark" ]; then
+		return 0
+	fi
+
+
+	wget -c 'https://github.com/vinceliuice/Qogir-theme/archive/refs/heads/master.tar.gz' -O '/tmp/Qogir-theme-master.tar.gz'
+
+
+
+
+	cd /tmp
+
+	tar xf Qogir-theme-master.tar.gz
+
+	cd "${OLDPWD}"
+
+
+
+
+	cd /tmp/Qogir-theme-master
+
+	./install.sh --theme all
+
+	cd "${OLDPWD}"
+
+}
+
+
+
+
+##
+##
+################################################################################
+##
+##
+
+
+
+
+##
 ## ## Portal
 ##
 
