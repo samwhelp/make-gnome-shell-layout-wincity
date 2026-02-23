@@ -1820,7 +1820,7 @@ sys_theme_install_lavanda_gtk_theme_via_wget_archive () {
 
 	cd /tmp/Lavanda-gtk-theme-main
 
-	./install.sh --theme all
+	./install.sh
 
 	cd "${OLDPWD}"
 
