@@ -267,15 +267,15 @@ sys_wallpaper_config_install_for_wincity () {
 
 
 	## config via gsettings set
-	#gsettings set org.gnome.desktop.background picture-uri "'/usr/share/backgrounds/default.jpeg'"
-	#gsettings set org.gnome.desktop.background picture-uri-dark "'/usr/share/backgrounds/default.jpeg'"
-	#gsettings set org.gnome.desktop.screensaver picture-uri "'/usr/share/backgrounds/default-login.jpeg'"
+	#gsettings set org.gnome.desktop.background picture-uri "'/usr/share/backgrounds/default.png'"
+	#gsettings set org.gnome.desktop.background picture-uri-dark "'/usr/share/backgrounds/default.png'"
+	#gsettings set org.gnome.desktop.screensaver picture-uri "'/usr/share/backgrounds/default-login.png'"
 
 
 	## config via dconf write
-	#dconf write /org/gnome/desktop/background/picture-uri "'/usr/share/backgrounds/default.jpeg'"
-	#dconf write /org/gnome/desktop/background/picture-uri-dark "'/usr/share/backgrounds/default.jpeg'"
-	#dconf write /org/gnome/desktop/screensaver/picture-uri "'/usr/share/backgrounds/default-login.jpeg'"
+	#dconf write /org/gnome/desktop/background/picture-uri "'/usr/share/backgrounds/default.png'"
+	#dconf write /org/gnome/desktop/background/picture-uri-dark "'/usr/share/backgrounds/default.png'"
+	#dconf write /org/gnome/desktop/screensaver/picture-uri "'/usr/share/backgrounds/default-login.png'"
 
 
 	## config via dconf load
@@ -321,7 +321,7 @@ sys_wallpaper_asset_install_for_wincity () {
 
 
 	echo
-	echo sudo wget -c "https://raw.githubusercontent.com/vinceliuice/MacTahoe-kde/refs/heads/main/wallpapers/MacTahoe-Light/contents/images/3840x2160.jpeg" -O "./Fluent-round-light.png"
+	echo sudo wget -c "https://raw.githubusercontent.com/vinceliuice/Fluent-kde/refs/heads/main/wallpaper/Fluent-round-light/contents/images/3840x2160.png" -O "./Fluent-round-light.png"
 	echo
 	sudo wget -c "https://raw.githubusercontent.com/vinceliuice/Fluent-kde/refs/heads/main/wallpaper/Fluent-round-light/contents/images/3840x2160.png" -O "./Fluent-round-light.png"
 
