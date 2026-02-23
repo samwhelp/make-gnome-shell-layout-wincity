@@ -1536,6 +1536,107 @@ sys_theme_install_jasper_gtk_theme_via_wget_archive () {
 
 
 ##
+## ## Model / Style / orchis
+##
+
+sys_style_install_for_orchis () {
+
+	sys_style_asset_install_for_orchis
+
+	sys_style_config_install_for_orchis
+
+}
+
+sys_style_config_install_for_orchis () {
+
+dconf load / << __EOF__
+
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+gtk-theme='Orchis-Dark'
+icon-theme='Citrus-red-dark'
+cursor-theme='Vimix-cursors'
+cursor-size=24
+
+
+[org/gnome/desktop/wm/preferences]
+theme='Orchis-Dark'
+
+
+[org/gnome/shell/extensions/user-theme]
+name='Orchis-Dark'
+
+
+__EOF__
+
+}
+
+sys_style_asset_install_for_orchis () {
+
+	sys_wallpaper_install_for_default
+
+	sys_theme_install_orchis_gtk_theme
+
+	sys_theme_install_vimix_cursor_theme
+
+	sys_theme_install_citrus_icon_theme
+
+	sys_theme_install_greystone_icon_theme
+
+	sys_theme_install_questx_icon_theme
+
+}
+
+sys_theme_install_orchis_gtk_theme () {
+
+	sys_theme_install_orchis_gtk_theme_via_wget_archive
+
+}
+
+sys_theme_install_orchis_gtk_theme_via_wget_archive () {
+
+
+	if [ -e "${HOME}/.themes/Orchis-Dark" ]; then
+		return 0
+	fi
+
+
+	wget -c 'https://github.com/vinceliuice/Orchis-theme/archive/refs/heads/master.tar.gz' -O '/tmp/Orchis-theme-master.tar.gz'
+
+
+
+
+	cd /tmp
+
+	tar xf Orchis-theme-master.tar.gz
+
+	cd "${OLDPWD}"
+
+
+
+
+	cd /tmp/Orchis-theme-master
+
+	./install.sh --theme all
+
+	cd "${OLDPWD}"
+
+}
+
+
+
+
+##
+##
+################################################################################
+##
+##
+
+
+
+
+##
 ## ## Portal
 ##
 
