@@ -70,7 +70,7 @@ bash -c "$(wget -q https://raw.githubusercontent.com/samwhelp/make-gnome-shell-l
 ```
 
 
-> Option: `REF_MASTER_DISTRO`
+> Option: [REF_MASTER_DISTRO](#option--ref_master_distro)
 
 * execute local script
 
@@ -85,7 +85,7 @@ REF_MASTER_DISTRO=archlinux bash <(curl -L https://raw.githubusercontent.com/sam
 ```
 
 
-> Option: `REF_MASTER_STYLE`
+> Option: [REF_MASTER_STYLE](#option--ref_master_style)
 
 * execute local script
 
