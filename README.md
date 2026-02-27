@@ -107,28 +107,28 @@ REF_MASTER_STYLE=jasper bash <(curl -L https://raw.githubusercontent.com/samwhel
 
 ### Option / REF_MASTER_DISTRO
 
-| REF_MASTER_DISTRO |
-| ----------------- |
-| `debian` (default) |
-| `ubuntu` |
-| `fedora` |
-| `archlinux` |
-| `voidlinux` |
+| REF_MASTER_DISTRO   |
+| ------------------- |
+| `debian` (default)  |
+| `ubuntu`            |
+| `fedora`            |
+| `archlinux`         |
+| `voidlinux`         |
 
 
 ### Option / REF_MASTER_STYLE
 
-| REF_MASTER_STYLE |
-| ---------------- |
-| `fluent` (default) |
-| `colloid` |
-| `jasper` |
-| `graphite` |
-| `vimix` |
-| `orchis` |
-| `layan` |
-| `lavanda` |
-| `qogir` |
+| REF_MASTER_STYLE    |
+| ------------------- |
+| `fluent` (default)  |
+| `colloid`           |
+| `jasper`            |
+| `graphite`          |
+| `vimix`             |
+| `orchis`            |
+| `layan`             |
+| `lavanda`           |
+| `qogir`             |
 
 
 
