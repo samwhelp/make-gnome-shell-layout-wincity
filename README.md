@@ -19,6 +19,7 @@
 * [Requirement](https://github.com/samwhelp/make-gnome-shell-layout-wincity/tree/main/docs/requirement)
 * [Keybind](https://github.com/samwhelp/make-gnome-shell-layout-wincity/blob/main/docs/keybind.md)
 * [Usage](#usage)
+* [Option](#option)
 * [Extension](#extension)
 
 
@@ -69,7 +70,7 @@ bash -c "$(wget -q https://raw.githubusercontent.com/samwhelp/make-gnome-shell-l
 ```
 
 
-> option: `REF_MASTER_DISTRO`
+> Option: `REF_MASTER_DISTRO`
 
 * execute local script
 
@@ -84,7 +85,7 @@ REF_MASTER_DISTRO=archlinux bash <(curl -L https://raw.githubusercontent.com/sam
 ```
 
 
-> option: `REF_MASTER_STYLE`
+> Option: `REF_MASTER_STYLE`
 
 * execute local script
 
@@ -99,6 +100,33 @@ REF_MASTER_STYLE=jasper bash <(curl -L https://raw.githubusercontent.com/samwhel
 ```
 
 
+## Option
+
+
+### Option / REF_MASTER_DISTRO
+
+| REF_MASTER_DISTRO |
+| ----------------- |
+| `debian` (default) |
+| `ubuntu` |
+| `fedora` |
+| `archlinux` |
+| `voidlinux` |
+
+
+### Option / REF_MASTER_STYLE
+
+| REF_MASTER_STYLE |
+| ---------------- |
+| `fluent` (default) |
+| `colloid` |
+| `jasper` |
+| `graphite` |
+| `vimix` |
+| `orchis` |
+| `layan` |
+| `lavanda` |
+| `qogir` |
 
 
 ## Extension
