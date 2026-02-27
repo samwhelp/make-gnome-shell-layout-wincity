@@ -27,7 +27,7 @@
 ## Usage
 
 
-## Quick Start
+### Quick Start
 
 > How to download [make-gnome-shell-layout-wincity.sh](https://github.com/samwhelp/make-gnome-shell-layout-wincity/blob/main/make-gnome-shell-layout-wincity.sh) and run [it](https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh).
 
@@ -57,6 +57,45 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/samwhelp/make-gnome-shel
 
 ``` sh
 bash -c "$(wget -q https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh -O - || curl -fsSL https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh)"
+```
+
+
+### Basic
+
+> default
+
+``` sh
+./make-gnome-shell-layout-wincity.sh
+```
+
+
+> option: `REF_MASTER_DISTRO`
+
+* execute local script
+
+``` sh
+REF_MASTER_DISTRO=archlinux ./make-gnome-shell-layout-wincity.sh
+```
+
+* execute remote script
+
+``` sh
+REF_MASTER_DISTRO=archlinux bash <(curl -L https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh)
+```
+
+
+> option: `REF_MASTER_STYLE`
+
+* execute local script
+
+``` sh
+REF_MASTER_STYLE=jasper ./make-gnome-shell-layout-wincity.sh
+```
+
+* execute remote script
+
+``` sh
+REF_MASTER_STYLE=jasper bash <(curl -L https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh)
 ```
 
 
