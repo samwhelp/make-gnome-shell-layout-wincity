@@ -26,28 +26,29 @@
 
 > How to download [make-gnome-shell-layout-wincity.sh](https://github.com/samwhelp/make-gnome-shell-layout-wincity/blob/main/make-gnome-shell-layout-wincity.sh) and run [it](https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh).
 
-> run
+
+* run
 
 ``` sh
 bash <(curl -L https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh)
 ```
 
 
-> or run
+* or run
 
 ``` sh
 bash <(wget -q https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh -O - )
 ```
 
 
-> or run
+* or run
 
 ``` sh
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh || wget -q https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh -O - )"
 ```
 
 
-> or run
+* or run
 
 ``` sh
 bash -c "$(wget -q https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh -O - || curl -fsSL https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh)"
