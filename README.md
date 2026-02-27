@@ -14,6 +14,7 @@
 * [Requirement](https://github.com/samwhelp/make-gnome-shell-layout-wincity/tree/main/docs/requirement)
 * [Keybind](https://github.com/samwhelp/make-gnome-shell-layout-wincity/blob/main/docs/keybind.md)
 * [Usage](#usage)
+* [Option](#option)
 * [Extension](#extension)
 
 
@@ -22,7 +23,7 @@
 ## Usage
 
 
-## Quick Start
+### Quick Start
 
 > How to download [make-gnome-shell-layout-wincity.sh](https://github.com/samwhelp/make-gnome-shell-layout-wincity/blob/main/make-gnome-shell-layout-wincity.sh) and run [it](https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh).
 
@@ -55,6 +56,72 @@ bash -c "$(wget -q https://raw.githubusercontent.com/samwhelp/make-gnome-shell-l
 ```
 
 
+### Basic
+
+> default
+
+``` sh
+./make-gnome-shell-layout-wincity.sh
+```
+
+
+> Option: [REF_MASTER_DISTRO](#option--ref_master_distro)
+
+* execute local script
+
+``` sh
+REF_MASTER_DISTRO=archlinux ./make-gnome-shell-layout-wincity.sh
+```
+
+* execute remote script
+
+``` sh
+REF_MASTER_DISTRO=archlinux bash <(curl -L https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh)
+```
+
+
+> Option: [REF_MASTER_STYLE](#option--ref_master_style)
+
+* execute local script
+
+``` sh
+REF_MASTER_STYLE=jasper ./make-gnome-shell-layout-wincity.sh
+```
+
+* execute remote script
+
+``` sh
+REF_MASTER_STYLE=jasper bash <(curl -L https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh)
+```
+
+
+## Option
+
+
+### Option / REF_MASTER_DISTRO
+
+| REF_MASTER_DISTRO |
+| ----------------- |
+| `debian` (default) |
+| `ubuntu` |
+| `fedora` |
+| `archlinux` |
+| `voidlinux` |
+
+
+### Option / REF_MASTER_STYLE
+
+| REF_MASTER_STYLE |
+| ---------------- |
+| `fluent` (default) |
+| `colloid` |
+| `jasper` |
+| `graphite` |
+| `vimix` |
+| `orchis` |
+| `layan` |
+| `lavanda` |
+| `qogir` |
 
 
 ## Extension
