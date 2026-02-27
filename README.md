@@ -13,16 +13,18 @@
 
 * [Requirement](https://github.com/samwhelp/make-gnome-shell-layout-wincity/tree/main/docs/requirement)
 * [Keybind](https://github.com/samwhelp/make-gnome-shell-layout-wincity/blob/main/docs/keybind.md)
-* [Howto](#howto)
+* [Usage](#usage)
 * [Extension](#extension)
 
 
 
 
-## Howto
+## Usage
 
 
-### How to download [make-gnome-shell-layout-wincity.sh](https://github.com/samwhelp/make-gnome-shell-layout-wincity/blob/main/make-gnome-shell-layout-wincity.sh) and run [it](https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh).
+## Quick Start
+
+> How to download [make-gnome-shell-layout-wincity.sh](https://github.com/samwhelp/make-gnome-shell-layout-wincity/blob/main/make-gnome-shell-layout-wincity.sh) and run [it](https://raw.githubusercontent.com/samwhelp/make-gnome-shell-layout-wincity/refs/heads/main/make-gnome-shell-layout-wincity.sh).
 
 > run
 
