@@ -176,7 +176,6 @@ REF_MASTER_STYLE=jasper bash <(curl -L https://raw.githubusercontent.com/samwhel
 | ----------- |
 | [ubuntu-iso-builder-include-pacstall-gnome-shell-layout-wincity](https://github.com/samwhelp/ubuntu-iso-builder-include-pacstall-gnome-shell-layout-wincity) |
 | [debian-iso-builder-include-pacstall-gnome-shell-layout-wincity](https://github.com/samwhelp/debian-iso-builder-include-pacstall-gnome-shell-layout-wincity) |
-| [debian-iso-builder-include-pacstall-gnome-shell-layout-wincity](https://github.com/samwhelp/debian-iso-builder-include-pacstall-gnome-shell-layout-wincity) |
 | [voidlinux-live-build-config-respin-gnome-shell-layout-wincity](https://github.com/samwhelp/voidlinux-live-build-config-respin-gnome-shell-layout-wincity) |
 
 
